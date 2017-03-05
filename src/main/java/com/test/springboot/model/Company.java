@@ -15,7 +15,7 @@ public class Company implements Serializable {
 
 	@Id
 	@Column(name = "companyId")
-	private Integer companyId;
+	private Long companyId;
 
 	@Column(name = "description")
 	private String description;
@@ -23,11 +23,11 @@ public class Company implements Serializable {
 	@Column(name = "companyName")
 	private String companyName;
 
-	public void setCompanyId(Integer companyId) {
+	public void setCompanyId(Long companyId) {
 		this.companyId = companyId;
 	}
 
-	public Integer getCompanyId() {
+	public Long getCompanyId() {
 		return this.companyId;
 	}
 

@@ -24,6 +24,20 @@ app.config(['$stateProvider', '$urlRouterProvider',
                     }
                 }
             });
+        /*.state('home', {
+            url: '/',
+            templateUrl: 'partials/categoryList',
+            controller:'CategoryController',
+            controllerAs:'ctrl',
+            resolve: {
+                categories: function ($q, CategoryService) {
+                    console.log('Load all Categories');
+                    var deferred = $q.defer();
+                    CategoryService.loadAllCategories().then(deferred.resolve, deferred.resolve);
+                    return deferred.promise;
+                }
+            }
+        });*/
         $urlRouterProvider.otherwise('/');
     }]);
 

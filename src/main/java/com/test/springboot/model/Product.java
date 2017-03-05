@@ -14,7 +14,7 @@ public class Product implements Serializable {
 
 	@Id
 	@Column(name = "productId")
-	private Integer productId;
+	private Long productId;
 
 	@Column(name = "productName")
 	private String productName;
@@ -22,11 +22,11 @@ public class Product implements Serializable {
 	@Column(name = "description")
 	private String description;
 
-	public void setProductId(Integer productId) {
+	public void setProductId(Long productId) {
 		this.productId = productId;
 	}
 
-	public Integer getProductId() {
+	public Long getProductId() {
 		return this.productId;
 	}
 

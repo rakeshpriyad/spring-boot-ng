@@ -15,7 +15,7 @@ public class Transaction implements Serializable {
 
 	@Id
 	@Column(name = "transactionId")
-	private Integer transactionId;
+	private Long transactionId;
 
 	@Column(name = "transactionName")
 	private String transactionName;
@@ -35,11 +35,11 @@ public class Transaction implements Serializable {
 	@Column(name = "imageName")
 	private String imageName;
 
-	public void setTransactionId(Integer transactionId) {
+	public void setTransactionId(Long transactionId) {
 		this.transactionId = transactionId;
 	}
 
-	public Integer getTransactionId() {
+	public Long getTransactionId() {
 		return this.transactionId;
 	}
 

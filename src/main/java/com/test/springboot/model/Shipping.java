@@ -15,7 +15,7 @@ public class Shipping implements Serializable {
 
 	@Id
 	@Column(name = "shippingId")
-	private Integer shippingId;
+	private Long shippingId;
 
 	@Column(name = "userId")
 	private String userId;
@@ -44,11 +44,11 @@ public class Shipping implements Serializable {
 	@Column(name = "address2")
 	private String address2;
 
-	public void setShippingId(Integer shippingId) {
+	public void setShippingId(Long shippingId) {
 		this.shippingId = shippingId;
 	}
 
-	public Integer getShippingId() {
+	public Long getShippingId() {
 		return this.shippingId;
 	}
 
