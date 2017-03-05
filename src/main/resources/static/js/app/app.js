@@ -23,9 +23,9 @@ app.config(['$stateProvider', '$urlRouterProvider',
                         return deferred.promise;
                     }
                 }
-            });
-        /*.state('home', {
-            url: '/',
+            })
+        .state('categoryHome', {
+            url: '/categoryHome',
             templateUrl: 'partials/categoryList',
             controller:'CategoryController',
             controllerAs:'ctrl',
@@ -37,7 +37,7 @@ app.config(['$stateProvider', '$urlRouterProvider',
                     return deferred.promise;
                 }
             }
-        });*/
+        });
         $urlRouterProvider.otherwise('/');
     }]);
 

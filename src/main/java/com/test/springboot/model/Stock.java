@@ -15,7 +15,7 @@ public class Stock implements Serializable {
 
 	@Id
 	@Column(name = "stockId")
-	private Integer stockId;
+	private Long stockId;
 
 	@Column(name = "qtyUnit")
 	private String qtyUnit;
@@ -35,11 +35,11 @@ public class Stock implements Serializable {
 	@Column(name = "imageName")
 	private String imageName;
 
-	public void setStockId(Integer stockId) {
+	public void setStockId(Long stockId) {
 		this.stockId = stockId;
 	}
 
-	public Integer getStockId() {
+	public Long getStockId() {
 		return this.stockId;
 	}
 

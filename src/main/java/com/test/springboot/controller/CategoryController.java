@@ -30,8 +30,8 @@ public class CategoryController {
 
 	// -------------------Retrieve All Categorys---------------------------------------------
 
-	@RequestMapping(value = "/listAll/", method = RequestMethod.GET)
-	public ResponseEntity<List<Category>> listAllCategorys() {
+	@RequestMapping(value = "loadAllCategories", method = RequestMethod.GET)
+	public ResponseEntity<List<Category>> listAllCategories() {
 		List<Category> categorys = categoryService.findAllCategorys();
 		if (categorys.isEmpty()) {
 			return new ResponseEntity<List<Category>>(HttpStatus.NO_CONTENT);
@@ -56,7 +56,7 @@ public class CategoryController {
 
 	// -------------------Create a Category-------------------------------------------
 
-	@RequestMapping(value = "/create/", method = RequestMethod.POST)
+	@RequestMapping(value = "createCategory", method = RequestMethod.POST)
 	public ResponseEntity<?> createCategory(@RequestBody Category category, UriComponentsBuilder ucBuilder) {
 		logger.info("Creating Category : {}", category);
 
