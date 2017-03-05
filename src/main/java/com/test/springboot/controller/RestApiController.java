@@ -62,7 +62,7 @@ public class RestApiController {
 
 		if (userService.isUserExist(user)) {
 			logger.error("Unable to create. A User with name {} already exist", user.getName());
-			return new ResponseEntity(new CustomErrorType("Unable to create. A User with name " + 
+			return new ResponseEntity<Object>(new CustomErrorType("Unable to create. A User with name " + 
 			user.getName() + " already exist."),HttpStatus.CONFLICT);
 		}
 		userService.saveUser(user);
@@ -82,7 +82,7 @@ public class RestApiController {
 
 		if (currentUser == null) {
 			logger.error("Unable to update. User with id {} not found.", id);
-			return new ResponseEntity(new CustomErrorType("Unable to upate. User with id " + id + " not found."),
+			return new ResponseEntity<Object>(new CustomErrorType("Unable to upate. User with id " + id + " not found."),
 					HttpStatus.NOT_FOUND);
 		}
 
@@ -103,7 +103,7 @@ public class RestApiController {
 		User user = userService.findById(id);
 		if (user == null) {
 			logger.error("Unable to delete. User with id {} not found.", id);
-			return new ResponseEntity(new CustomErrorType("Unable to delete. User with id " + id + " not found."),
+			return new ResponseEntity<Object>(new CustomErrorType("Unable to delete. User with id " + id + " not found."),
 					HttpStatus.NOT_FOUND);
 		}
 		userService.deleteUserById(id);
