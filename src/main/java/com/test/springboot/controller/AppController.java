@@ -10,8 +10,14 @@ public class AppController {
 
 	@RequestMapping("/")
 	String home(ModelMap modal) {
-		modal.addAttribute("title","CRUD Example");
+		modal.addAttribute("title","Spring NG Example");
 		return "index";
+	}
+	
+	@RequestMapping("/categoryHome")
+	String CategoryHome(ModelMap modal) {
+		modal.addAttribute("title","Spring NG Example");
+		return "category";
 	}
 
 	@RequestMapping("/partials/{page}")

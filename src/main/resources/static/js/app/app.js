@@ -2,7 +2,8 @@ var app = angular.module('crudApp',['ui.router','ngStorage']);
 
 app.constant('urls', {
     BASE: 'http://localhost:8080/spring-boot-ng-crud/',
-    USER_SERVICE_API : 'http://localhost:8080/spring-boot-ng-crud/api/user/'
+    USER_SERVICE_API : 'http://localhost:8080/spring-boot-ng-crud/api/user/',
+    CATEGORY_SERVICE_API : 'http://localhost:8080/spring-boot-ng-crud/category/'
 });
 
 app.config(['$stateProvider', '$urlRouterProvider',
