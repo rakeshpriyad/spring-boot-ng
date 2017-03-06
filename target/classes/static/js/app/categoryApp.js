@@ -2,8 +2,8 @@ var app = angular.module('crudApp',['ui.router','ngStorage']);
 
 app.constant('urls', {
     BASE: 'http://localhost:8080/spring-boot-ng-crud/',
-    USER_SERVICE_API : 'http://localhost:8080/spring-boot-ng-crud/api/user/',
-    CATEGORY_SERVICE_API : 'http://localhost:8080/spring-boot-ng-crud/category/'
+    USER_SERVICE_API : 'http://localhost:8080/spring-boot-ng-crud/category/loadAllCategories/',
+    CATEGORY_SERVICE_API : 'http://localhost:8080/spring-boot-ng-crud/category/loadAllCategories/'
 });
 
 app.config(['$stateProvider', '$urlRouterProvider',
@@ -12,14 +12,14 @@ app.config(['$stateProvider', '$urlRouterProvider',
         $stateProvider
             .state('home', {
                 url: '/',
-                templateUrl: 'partials/list',
-                controller:'UserController',
+                templateUrl: 'partials/categoryList',
+                controller:'CategoryController',
                 controllerAs:'ctrl',
                 resolve: {
-                    users: function ($q, UserService) {
+                    users: function ($q, CategoryService) {
                         console.log('Load all users');
                         var deferred = $q.defer();
-                        UserService.loadAllUsers().then(deferred.resolve, deferred.resolve);
+                        CategoryService.loadAllCategories().then(deferred.resolve, deferred.resolve);
                         return deferred.promise;
                     }
                 }

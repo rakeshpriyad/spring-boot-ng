@@ -12,3 +12,11 @@
 As vm argument by right click on this file--> Run configuration-->go to Arguments tab --> put 
 -Dspring.profiles.active=local 
 in vm argument
+
+
+
+TO Open User page:
+http://localhost:8080/spring-boot-ng-crud/test#/
+
+To Open Category Page: 
+http://localhost:8080/spring-boot-ng-crud/categoryHome#/

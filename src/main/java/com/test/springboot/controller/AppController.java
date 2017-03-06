@@ -8,15 +8,15 @@ import org.springframework.web.bind.annotation.RequestMapping;
 @Controller
 public class AppController {
 
-	@RequestMapping("/")
+	@RequestMapping("/test")
 	String home(ModelMap modal) {
-		modal.addAttribute("title","Spring NG Example");
+		modal.addAttribute("title","Spring NG User Page");
 		return "index";
 	}
 	
 	@RequestMapping("/categoryHome")
 	String CategoryHome(ModelMap modal) {
-		modal.addAttribute("title","Spring NG Example");
+		modal.addAttribute("title","Spring NG Category Page");
 		return "category";
 	}
 
