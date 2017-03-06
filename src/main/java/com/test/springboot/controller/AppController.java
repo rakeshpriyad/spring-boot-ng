@@ -19,6 +19,12 @@ public class AppController {
 		modal.addAttribute("title","Spring NG Category Page");
 		return "category";
 	}
+	
+	@RequestMapping("/companyHome")
+	String CompanyHome(ModelMap modal) {
+		modal.addAttribute("title","Spring NG Company Page");
+		return "company";
+	}
 
 	@RequestMapping("/partials/{page}")
 	String partialHandler(@PathVariable("page") final String page) {
